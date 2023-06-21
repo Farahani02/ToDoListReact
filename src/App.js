@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
+import MainComponent from './components/MainComponent';
 
 function App() {
+  const [data, setData] = useState([
+    { id: 1, title: 'task 1' },
+    { id: 2, title: 'task 2' },
+    { id: 3, title: 'task 3' },
+    { id: 4, title: 'task 4' }
+  ])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App border border-3 shadow-lg container my-3">
+      
+      <MainComponent sampleData={data} stateUpdater = {setData} />
     </div>
   );
 }

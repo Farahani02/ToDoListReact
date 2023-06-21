@@ -1,0 +1,10 @@
+#background-image {
+  background: url("../img/taphouse.jpg");
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
